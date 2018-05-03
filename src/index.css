@@ -89,3 +89,31 @@ input[disabled]::placeholder {
   background: rgba(0,0,0,.2);
   box-shadow: 0 0 10px #000;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  .exc {
+    margin: 35px auto;
+  }
+  .row {
+    display: block;
+  }
+  .col-md-4 {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  input[disabled] {
+    text-align: center;
+  }
+
+  #sum {
+    margin-bottom: 15px;
+  }
+}
