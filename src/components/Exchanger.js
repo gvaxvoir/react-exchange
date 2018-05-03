@@ -31,12 +31,13 @@ class Exchanger extends Component {
         sum    = parseFloat(document.getElementById('sum').value);
         amt    = sum * stRate / fnRate;
         console.log(stRate, fnRate, sum, amt)
-        document.getElementById("amt").value = amt;
+        document.getElementById("amt").value = amt.toFixed(2);
     }
 
     render() {
         return (
-            <div className="container">
+            <div className="container exc">
+                <h1 className="title">Exchanger</h1>
                 <div className="row">
                     <div className="col-md-4">
                         <div>
@@ -66,10 +67,11 @@ class Exchanger extends Component {
                     </div>
 
                     <div className="col-md-4">
+                        <label htmlFor="sum">Enter your summ:</label>
                         <input type="number" min="0" id="sum" placeholder="0" onChange={this.handleClick} />
-                        <button onChange={this.handleClick} disabled>Calc!</button>
                     </div>
                     <div className="col-md-4">
+                        <label htmlFor="amt">Your amount:</label>
                         <input type="number" min="0" id="amt" placeholder="0" disabled />
                     </div>
                 </div>
